@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="psgra.sgra.ui.CoordinadorController"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@estilos.css"
+            styleClass="root">
+    <top>
+        <Label text="Panel de Coordinador" styleClass="label-title" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <Button text="Mostrar todas las reservas" onAction="#mostrarReservas"/>
+            <TableView fx:id="tablaReservas" prefHeight="200" styleClass="table-view">
+                <columns>
+                    <TableColumn text="Docente" fx:id="colDocente"/>
+                    <TableColumn text="Aula" fx:id="colAula"/>
+                    <TableColumn text="Curso" fx:id="colCurso"/>
+                    <TableColumn text="Fecha" fx:id="colFecha"/>
+                    <TableColumn text="Hora" fx:id="colHora"/>
+                </columns>
+            </TableView>
+            <Button text="Generar reporte semanal" onAction="#generarReporte"/>
+            <Label fx:id="lblEstado"/>
+        </VBox>
+    </center>
+</BorderPane>

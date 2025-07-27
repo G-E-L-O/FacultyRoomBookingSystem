@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox stylesheets="@reservasDocente.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psgra.sgra.ui.ReservasDocenteController">
+
+    <BorderPane VBox.vgrow="ALWAYS">
+        <left>
+            <VBox fx:id="sidebar" alignment="TOP_CENTER" spacing="20.0" styleClass="sidebar">
+
+                <!-- Cabecera del calendario -->
+                <HBox alignment="CENTER" spacing="8">
+                    <Label fx:id="currentDateLabel" styleClass="calendar-header-label" />
+                    <Button onAction="#movePreviousMonth" prefWidth="39" text="←" />
+                    <Button onAction="#moveNextMonth" text="→" />
+                    <Button onAction="#goToToday" text="Hoy" />
+                    <ComboBox fx:id="viewModeSelector" onAction="#changeViewMode" prefWidth="120">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Diario" />
+                                <String fx:value="Semanal" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </HBox>
+
+                <!-- Calendario -->
+                <GridPane fx:id="calendarGrid" alignment="CENTER" hgap="15.0" vgap="15.0" />
+
+                <!-- Consultar aulas disponibles -->
+                <Label prefWidth="180.0" styleClass="section-title" text="Consultar aulas disponibles" />
+
+                <VBox alignment="CENTER" spacing="20.0">
+                    <HBox spacing="16">
+                        <VBox spacing="4">
+                            <Label styleClass="label" text="Día:" />
+                            <DatePicker fx:id="diaConsulta" prefHeight="30.0" prefWidth="200.0" styleClass="input-control filtro-item" />
+                        </VBox>
+                        <VBox spacing="4">
+                            <Label styleClass="label" text="Aula:" />
+                            <ComboBox fx:id="aulaSelect" prefHeight="30.0" prefWidth="200.0" styleClass="input-control filtro-item" />
+                        </VBox>
+                    </HBox>
+
+                    <HBox spacing="20.0">
+                        <VBox spacing="4">
+                            <Label styleClass="label" text="Desde:" />
+                            <ComboBox fx:id="horaInicio" prefHeight="30.0" prefWidth="200.0" styleClass="input-control filtro-item" />
+                        </VBox>
+                        <VBox spacing="4">
+                            <Label styleClass="label" text="Hasta:" />
+                            <ComboBox fx:id="horaFin" prefHeight="30.0" prefWidth="200.0" styleClass="input-control filtro-item" />
+                        </VBox>
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="16">
+                        <VBox spacing="4">
+                            <Label styleClass="label" text="Curso:" />
+                            <TextField fx:id="cursoFiltro" prefHeight="30.0" prefWidth="200.0" styleClass="input-control filtro-item" />
+                        </VBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="46.0" prefWidth="200.0">
+                     <children>
+                              <VBox alignment="BOTTOM_LEFT">
+                                  <CheckBox fx:id="soloHorasLibres" styleClass="label" text="Solo horas libres" />
+                              </VBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets right="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </VBox>
+                    </HBox>
+
+                    <HBox alignment="CENTER">
+                        <Button fx:id="btnConsultar" onAction="#consultarDisponibilidad" prefHeight="27.0" prefWidth="136.0" styleClass="button consultar" text="Consultar" />
+                    </HBox>
+                </VBox>
+
+                <!-- 🔽 Botón y resultados de disponibilidad -->
+                <VBox spacing="8">
+
+                    <ScrollPane fx:id="scrollDisponibilidad" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" managed="false" maxHeight="120" styleClass="resultados-scroll" vbarPolicy="AS_NEEDED" visible="false">
+                        <ListView fx:id="disponibilidadResultados" styleClass="resultados-listview" />
+                    </ScrollPane>
+                </VBox>
+
+                <!-- 🔽 Búsqueda -->
+                <VBox spacing="8">
+                    <Label text="Buscar reservas:" />
+                    <TextField fx:id="busqueda" onKeyReleased="#buscarReservas" prefHeight="30.0" styleClass="input-control" />
+
+                    <ScrollPane fx:id="scrollResultados" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" managed="false" maxHeight="120" styleClass="resultados-scroll" vbarPolicy="AS_NEEDED" visible="false">
+                        <ListView fx:id="resultadosBusqueda" styleClass="resultados-listview" />
+                    </ScrollPane>
+                </VBox>
+
+            </VBox>
+        </left>
+
+        <!-- Vista principal -->
+        <center>
+            <StackPane fx:id="mainView">
+                <!-- Vista diaria -->
+                <VBox fx:id="dayView" visible="true">
+                    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 12 0 12;">
+                        <Label fx:id="dayShort" styleClass="header-day">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnGuardarDia" onAction="#enviarHorarioConAccesoFacilAlArchivo" prefHeight="30.0" prefWidth="118.0" styleClass="button" text="Enviar">
+                            <tooltip>
+                                <Tooltip text="Se guardarán y enviarán por correo las reservas creadas o modificadas." />
+                            </tooltip>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                        </Button>
+                    </HBox>
+
+                    <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true">
+                        <StackPane fx:id="contenedorPrincipal">
+                            <VBox fx:id="hourContainer" />
+                            <Region fx:id="lineaRoja" styleClass="linea-actual" StackPane.alignment="TOP_LEFT" />
+                        </StackPane>
+                    </ScrollPane>
+                </VBox>
+
+                <!-- Vista semanal -->
+                <VBox fx:id="weekView" visible="false">
+                    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 12 0 12;">
+                        <Label fx:id="weekShort" styleClass="header-day" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnGuardarSemana" onAction="#enviarHorarioSemanal" styleClass="button" text="Enviar">
+                            <tooltip>
+                                <Tooltip text="Se guardarán y enviarán por correo las reservas creadas o modificadas." />
+                            </tooltip>
+                        </Button>
+                    </HBox>
+                    <StackPane>
+                        <GridPane fx:id="weekGrid" />
+                        <Region fx:id="lineaRojaSemanal" />
+                    </StackPane>
+                </VBox>
+            </StackPane>
+        </center>
+    </BorderPane>
+</VBox>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="fondoDocente" spacing="2.0" style="-fx-background-color: transparent;" stylesheets="@styles.css" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psgra.sgra.ui.InicioDocenteController">
+
+    <VBox spacing="10.0">
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Panel Docente" />
+        <Label style="-fx-font-size: 30px; -fx-text-fill: #b9bbbe;" text="Bienvenido, Prof. Ángel Quesada" />
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <VBox.margin>
+         <Insets left="50.0" top="50.0" />
+      </VBox.margin>
+    </VBox>
+
+    <!-- FlowPane directamente sin ScrollPane -->
+    <FlowPane fx:id="contenedorTarjetas" hgap="30" prefWrapLength="1200" style="-fx-padding: 50; -fx-background-color: transparent;" vgap="30" VBox.vgrow="ALWAYS">
+
+        <VBox styleClass="card">
+            <Label styleClass="card-title-cyan" text="Reservas Académicas" />
+            <Label styleClass="card-item" text="- Reservar aula por curso" />
+            <Label styleClass="card-item" text="- Consultar disponibilidad" />
+            <Label styleClass="card-item" text="- Cancelar reserva" />
+            <Button onAction="#abrirReservas" styleClass="link-button-cyan" text="Ver más" />
+        </VBox>
+
+        <VBox styleClass="card">
+            <Label styleClass="card-title-orange" text="Eventos No Académicos" />
+            <Label styleClass="card-item" text="- Charlas, Talleres, Reuniones" />
+            <Label styleClass="card-item" text="- Reservar espacios institucionales" />
+            <Button styleClass="link-button-orange" text="Reservar Evento" />
+        </VBox>
+
+        <VBox styleClass="card">
+            <Label styleClass="card-title-indigo" text="Horario Oficial" />
+            <Label styleClass="card-item" text="- Sincronización con sistema oficial" />
+            <Label styleClass="card-item" text="- Vista semanal" />
+            <Button styleClass="link-button-indigo" text="Ver Horario" />
+        </VBox>
+
+        <VBox styleClass="card">
+            <Label styleClass="card-title-indigo" text="Reportes" />
+            <Label styleClass="card-item" text="- Descargar reporte" />
+            <Button styleClass="link-button-indigo" text="Ver reportes" />
+        </VBox>
+
+    </FlowPane>
+</VBox>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="psgra.sgra.ui.ReportesDocenteController"
+      stylesheets="@reportesDocente.css"
+      spacing="20"
+      alignment="TOP_CENTER"
+      styleClass="reportes-root">
+
+    <VBox spacing="10" style="-fx-padding: 20;" alignment="TOP_LEFT">
+        <Label text="📊 Reportes Semanales de Reservas" styleClass="titulo-reportes" />
+        <HBox spacing="10">
+            <TextField promptText="Buscar reporte..." styleClass="busqueda" />
+            <Button text="Filtrar" styleClass="boton-filtrar" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="1 - 4 de 10" styleClass="contador" />
+        </HBox>
+    </VBox>
+
+    <ScrollPane fitToWidth="true" vbarPolicy="AS_NEEDED" styleClass="scroll-reportes">
+        <FlowPane fx:id="contenedorReportes" hgap="16" vgap="16" style="-fx-padding: 20;" prefWrapLength="900"
+                  styleClass="reporte-flow" />
+    </ScrollPane>
+</VBox>

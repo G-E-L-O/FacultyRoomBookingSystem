@@ -1,0 +1,134 @@
+.reportes-root {
+    -fx-background-color: transparent;
+}
+
+.titulo-reportes {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.busqueda {
+    -fx-background-color: #404249;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #b9bbbe;
+    -fx-font-size: 14px;
+    -fx-padding: 6 10;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+
+.boton-filtrar {
+    -fx-background-color: #5865f2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.contador {
+    -fx-text-fill: #b9bbbe;
+    -fx-font-size: 13px;
+}
+
+.reporte-card {
+    -fx-background-color: #313338;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+    -fx-spacing: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.1, 0, 2);
+    -fx-pref-width: 300;
+}
+
+.reporte-card:hover {
+    -fx-background-color: #3a3d42;
+    -fx-cursor: hand;
+}
+
+.reporte-titulo {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.reporte-desc {
+    -fx-text-fill: #b9bbbe;
+    -fx-font-size: 13px;
+    -fx-wrap-text: true;
+}
+
+.reporte-acciones {
+    -fx-text-fill: #7d8085;
+    -fx-font-size: 12px;
+    -fx-wrap-text: true;
+}
+
+
+
+.scroll-reportes {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-reportes .viewport {
+    -fx-background-color: transparent;
+}
+
+.reporte-card.azul {
+    -fx-background-color: #3b82f6;
+}
+
+.reporte-card.morado {
+    -fx-background-color: #8b5cf6;
+}
+
+.reporte-card.fucsia {
+    -fx-background-color: #ec4899;
+}
+
+.reporte-card.verde {
+    -fx-background-color: #10b981;
+}
+
+.reporte-card.amarillo {
+    -fx-background-color: #f59e0b;
+}
+
+.reporte-card.rojo {
+    -fx-background-color: #ef4444;
+}
+
+.reporte-card.azul .reporte-titulo,
+.reporte-card.morado .reporte-titulo,
+.reporte-card.fucsia .reporte-titulo,
+.reporte-card.verde .reporte-titulo,
+.reporte-card.amarillo .reporte-titulo,
+.reporte-card.rojo .reporte-titulo,
+.reporte-card.azul .reporte-desc,
+.reporte-card.morado .reporte-desc,
+.reporte-card.fucsia .reporte-desc,
+.reporte-card.verde .reporte-desc,
+.reporte-card.amarillo .reporte-desc,
+.reporte-card.rojo .reporte-desc,
+.reporte-card.azul .reporte-acciones,
+.reporte-card.morado .reporte-acciones,
+.reporte-card.fucsia .reporte-acciones,
+.reporte-card.verde .reporte-acciones,
+.reporte-card.amarillo .reporte-acciones,
+.reporte-card.rojo .reporte-acciones {
+    -fx-text-fill: white;
+}
+.boton-descarga {
+    -fx-background-color: #5865f2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 6 12;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 6;
+    -fx-alignment: center;
+}
+
+.boton-descarga:hover {
+    -fx-background-color: #4752c4;
+}

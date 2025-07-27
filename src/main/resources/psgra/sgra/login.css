@@ -1,0 +1,61 @@
+.login-container {
+    -fx-background-color: #2f3136;
+    -fx-padding: 40;
+    -fx-spacing: 10;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+    -fx-pref-height: 400;
+}
+
+.title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-text-fill: #b9bbbe;
+    -fx-font-size: 14px;
+}
+
+.form-label {
+    -fx-text-fill: #b9bbbe;
+    -fx-font-size: 12px;
+    -fx-padding: 5 0 0 0;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #202225;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+    -fx-background-radius: 4;
+    -fx-padding: 10;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #5865F2;
+    -fx-border-width: 2;
+}
+
+.login-button {
+    -fx-background-color: #5865F2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #4752c4;
+}
+
+.forgot-password {
+    -fx-text-fill: #00aff4;
+    -fx-font-size: 12px;
+    -fx-underline: false;
+}
+
+.forgot-password:hover {
+    -fx-underline: true;
+}

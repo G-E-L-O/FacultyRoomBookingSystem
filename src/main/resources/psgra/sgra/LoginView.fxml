@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.effect.GaussianBlur?>
+<StackPane fx:id="cuadro" stylesheets="@login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psgra.sgra.ui.LoginController">
+
+    <ImageView fx:id="backgroundImage" fitWidth="1920" fitHeight="1080" preserveRatio="false">
+        <image>
+            <Image url="@fondo-login.jpg" />
+        </image>
+        <effect>
+            <GaussianBlur radius="10.0" />
+        </effect>
+    </ImageView>
+
+    <VBox alignment="CENTER" maxWidth="400" prefWidth="400.0" maxHeight="400" spacing="15.0" styleClass="login-container">
+
+    <Label styleClass="title" text="¡Bienvenido de nuevo!" />
+        <Label styleClass="subtitle" text="Ingrese su información de docente/coordinador" />
+
+        <VBox alignment="CENTER" maxWidth="400" prefWidth="400.0" spacing="10.0">
+            <Label styleClass="form-label" text="CORREO" />
+            <TextField fx:id="emailField" promptText="ejemplo@correo.com" />
+
+            <Label styleClass="form-label" text="CONTRASEÑA" />
+            <PasswordField fx:id="passwordField" promptText="••••••••" />
+        </VBox>
+
+        <Button onAction="#handleLogin" styleClass="login-button" text="Iniciar sesión" />
+        <Hyperlink styleClass="forgot-password" text="¿Olvidaste tu contraseña?" />
+    </VBox>
+</StackPane>

@@ -1,0 +1,104 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #2b2d31;
+    -fx-text-fill: #ffffff;
+}
+
+/* Botones de menú lateral */
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b9bbbe;
+    -fx-font-size: 18px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-padding: 20 20 20 20;
+    -fx-pref-width: 400px;  /* Tamaño fijo */
+    -fx-pref-height: 40px;  /* Altura fija */
+}
+
+.menu-button:hover {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+}
+
+/* Labels por defecto */
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Tarjetas */
+.card {
+    -fx-background-color: #313338;
+    -fx-padding: 40;
+    -fx-spacing: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0.1, 0, 2);
+}
+
+/* Títulos de tarjeta sin tamaño fijo, solo color y peso */
+.card-title-blue {
+    -fx-text-fill: #5865f2;
+    -fx-font-weight: bold;
+}
+
+.card-title-purple {
+    -fx-text-fill: #a970ff;
+    -fx-font-weight: bold;
+}
+
+.card-title-green {
+    -fx-text-fill: #57f287;
+    -fx-font-weight: bold;
+}
+
+.card-title-cyan {
+    -fx-text-fill: #00c9ff;
+    -fx-font-weight: bold;
+}
+
+.card-title-orange {
+    -fx-text-fill: #fca311;
+    -fx-font-weight: bold;
+}
+
+.card-title-indigo {
+    -fx-text-fill: #7289da;
+    -fx-font-weight: bold;
+}
+
+/* Contenido dentro de las tarjetas */
+.card-item {
+    -fx-text-fill: #b9bbbe;
+}
+
+/* Botones tipo enlace */
+.link-button-blue,
+.link-button-purple,
+.link-button-green,
+.link-button-cyan,
+.link-button-orange,
+.link-button-indigo {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b9bbbe;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.link-button-blue:hover {
+    -fx-text-fill: #5865f2;
+}
+.link-button-purple:hover {
+    -fx-text-fill: #a970ff;
+}
+.link-button-green:hover {
+    -fx-text-fill: #57f287;
+}
+.link-button-cyan:hover {
+    -fx-text-fill: #00c9ff;
+}
+.link-button-orange:hover {
+    -fx-text-fill: #fca311;
+}
+.link-button-indigo:hover {
+    -fx-text-fill: #7289da;
+}

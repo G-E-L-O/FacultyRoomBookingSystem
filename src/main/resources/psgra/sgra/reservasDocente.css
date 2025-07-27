@@ -1,0 +1,414 @@
+.root {
+    -fx-background-color: #1e1f22;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.sidebar {
+    -fx-padding: 25;
+    -fx-spacing: 20;
+    -fx-background-color: #2b2d31;
+    -fx-border-color: #202225;
+    -fx-border-width: 0 0 0 0;
+
+    -fx-min-width: 280px;
+    -fx-pref-width: 450px;
+}
+
+.label {
+    -fx-text-fill: #ffffffdd;
+    -fx-font-size: 13px;
+}
+
+.calendar-header-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.section-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 8 0 0 0;
+}
+
+.input-control {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+    -fx-border-color: #5865f2;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 4 6;
+    -fx-font-size: 12px;
+}
+
+.button {
+    -fx-background-color: #5865f2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 6 12;
+}
+
+.button:hover {
+    -fx-background-color: #4752c4;
+}
+
+.combo-box, .date-picker, .text-field {
+    -fx-background-color: #40444b;
+    -fx-text-fill: white;
+    -fx-border-color: #40444b;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.combo-box .arrow, .date-picker .arrow {
+    -fx-background-color: white;
+}
+
+.list-view {
+    -fx-background-color: #2b2d31;
+    -fx-text-fill: white;
+    -fx-border-color: #3c3f45;
+}
+
+.calendar-day {
+    -fx-background-color: #2b2d31;
+    -fx-text-fill: #ffffffaa;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+}
+
+.calendar-day:hover {
+    -fx-background-color: #3a3c41;
+}
+
+.calendar-day.today {
+    -fx-border-color: #5865f2;
+    -fx-border-width: 2;
+}
+
+.calendar-day.selected {
+    -fx-background-color: #5865f2;
+    -fx-text-fill: white;
+}
+
+.calendar-day.reserved {
+    -fx-border-color: #faa61a;
+    -fx-border-width: 2;
+}
+
+/* ================= ITINERARIO DIARIO ================= */
+
+.hour-row {
+    -fx-padding: 20 12;
+    -fx-spacing: 12;
+    -fx-background-color: #2b2d31;
+    -fx-border-color: transparent;
+    -fx-alignment: center-left;
+}
+
+.hour-label {
+    -fx-text-fill: #ffffffaa;
+    -fx-font-size: 14px;
+    -fx-min-width: 50px;
+    -fx-font-weight: bold;
+}
+
+.hour-separator {
+    -fx-background-color: #3a3c41;
+    -fx-pref-height: 1px;
+    -fx-min-height: 1px;
+    -fx-max-height: 1px;
+    -fx-background-insets: 0;
+}
+
+.hour-row Label {
+    -fx-text-fill: #ffffffcc;
+    -fx-font-size: 14px;
+    -fx-min-width: 60px;
+}
+
+.itinerario-hour-label {
+    -fx-text-fill: #ffffffcc;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-min-width: 50px;
+    -fx-padding: 4 8 2 0;
+}
+
+.hour-block {
+    -fx-padding: 6 0 6 0; /* antes 2, ahora 6 */
+}
+
+.linea-actual {
+    -fx-background-color: #FF5555;
+    -fx-pref-height: 2px;
+    -fx-max-height: 2px;
+    -fx-min-height: 2px;
+    -fx-translate-y: 0;
+    -fx-cursor: hand;
+}
+
+.tooltip {
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-background-color: #2b2d31; /* fondo estilo Discord */
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 0, 2);
+}
+
+.header-day {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12 0 12 0;
+}
+
+/* ================= SEMANAL ================= */
+
+.week-cell, .celda-semana, .week-hour-cell {
+    -fx-background-color: #2b2d31;
+    -fx-border-color: #3c3f45;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 6 8;
+    -fx-spacing: 6;
+    -fx-min-height: 50px;
+}
+
+.week-hour-label {
+    -fx-text-fill: #ffffffcc;
+    -fx-font-size: 13px;
+    -fx-min-width: 60px;
+    -fx-padding: 6 4 6 4;
+}
+
+.week-day-header {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 6 4;
+    -fx-background-color: #2b2d31;
+    -fx-border-color: #40444b;
+    -fx-border-width: 0 0 1 0;
+}
+
+.week-reserva-label, .reserva-item, .reserva-item-semana {
+    -fx-background-color: #5865f2;
+    -fx-text-fill: white;
+    -fx-padding: 4 8;
+    -fx-background-radius: 6;
+    -fx-font-size: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 4, 0, 0, 2);
+    -fx-wrap-text: true;
+}
+
+.week-hour-row {
+    -fx-padding: 10 8;
+    -fx-spacing: 12;
+    -fx-background-color: #1e1f22;
+    -fx-border-color: #3c3f45;
+    -fx-border-width: 0 0 1 0;
+    -fx-min-height: 50px;
+}
+
+.check-box {
+    -fx-text-fill: white;
+}
+
+/* ================= SCROLL ================= */
+
+.scroll-pane, .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ================= COMBOBOX Y DATEPICKER (TEXTOS BLANCOS) ================= */
+
+/* Texto del ComboBox (parte visible cuando no está desplegado) */
+.combo-box .text {
+    -fx-text-fill: white;
+}
+
+/* Ítems del menú desplegable del ComboBox */
+.combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent; /* sin fondo azul */
+}
+
+/* Ítem seleccionado (sin fondo azul) */
+.combo-box .list-cell:selected {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+/* Ítem con hover (sin fondo azul) */
+.combo-box .list-cell:hover {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+/* DatePicker - texto blanco */
+.date-picker .text-field {
+    -fx-text-fill: white;
+}
+
+/* Celdas del calendario del DatePicker */
+.date-picker .cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: #3a3c41; /* leve contraste al pasar mouse */
+}
+
+.date-picker-popup .month-year-label,
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: white;
+}
+
+/* ===== ScrollBars Modernas ===== */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ScrollBar vertical */
+.scroll-bar:vertical {
+    -fx-pref-width: 8px;
+}
+
+/* ScrollBar horizontal */
+.scroll-bar:horizontal {
+    -fx-pref-height: 8px;
+}
+
+/* Track (el fondo de la scrollbar) */
+.scroll-bar .track {
+    -fx-background-color: #1e1f22;
+    -fx-background-radius: 6;
+}
+
+/* Thumb (la parte que se mueve) */
+.scroll-bar .thumb {
+    -fx-background-color: #5865f2;
+    -fx-background-radius: 6;
+}
+
+/* Hover del Thumb */
+.scroll-bar .thumb:hover {
+    -fx-background-color: #4752c4;
+}
+
+/* Botones de incremento/decremento (ocultos para look moderno) */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-shape: "";
+    -fx-opacity: 0;
+}
+
+/* Ocultar flechas internas */
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-opacity: 0;
+}
+
+.dialog-pane {
+    -fx-background-color: #2b2d31;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #3c3f45;
+    -fx-border-width: 1;
+}
+
+.dialog-pane .content {
+    -fx-background-color: transparent;
+    -fx-padding: 16;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: transparent;
+    -fx-padding: 16 16 0 16;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.dialog-pane .button-bar {
+    -fx-padding: 12;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #5865f2;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-font-weight: bold;
+    -fx-padding: 6 12;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #4752c4;
+}
+
+.resultados-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: #3c3f45;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.resultados-listview {
+    -fx-background-color: #2b2d31;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-font-size: 13px;
+}
+
+.resultados-listview .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-padding: 6 8;
+    -fx-font-size: 13px;
+}
+
+.resultados-listview .list-cell:hover {
+    -fx-background-color: #3a3c41;
+    -fx-cursor: hand;
+}
+
+.filtros-container {
+    -fx-padding: 12;
+    -fx-background-color: #2b2d31;
+    -fx-border-color: #3c3f45;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.filtro-item {
+    -fx-pref-width: 180px;
+    -fx-min-height: 28px;
+}
+
+.button.consultar {
+    -fx-pref-width: 160px;
+}
