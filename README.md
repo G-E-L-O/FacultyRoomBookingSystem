@@ -50,9 +50,13 @@ FacultyRoomBookingSystem/
 
 ## 🖼️ **Capturas de Pantalla**
 
-| 🏠 Inicio                            | 📅 Horario Semanal                     | 📄 Exportación Excel                  |
-|--------------------------------------|----------------------------------------|---------------------------------------|
-| ![main](docs/assets/img/dash(1).png) | ![weekly](docs/assets/img/dash(2).png) | ![excel](docs/assets/img/dash(3).png) |
+| 🏠 Inicio                            | 📅 Horario Semanal                     |
+|--------------------------------------|----------------------------------------|
+| ![main](docs/assets/img/dash(1).png) | ![weekly](docs/assets/img/dash(2).png) |
+
+| 📄 Exportación Excel                 |
+|-------------------------------------|
+| ![excel](docs/assets/img/dash(3).png) 
 
 ---
 
