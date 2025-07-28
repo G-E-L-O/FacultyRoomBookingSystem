@@ -56,7 +56,7 @@ FacultyRoomBookingSystem/
 
 | 📄 Exportación Excel                 |
 |-------------------------------------|
-| ![excel](docs/assets/img/dash(3).png) 
+| ![excel](docs/assets/img/dash(3).png) |
 
 ---
 
