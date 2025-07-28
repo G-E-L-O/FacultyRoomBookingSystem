@@ -88,7 +88,8 @@ Desde la vista semanal puedes exportar el horario en un archivo Excel que incluy
 
 ## 📄 **Licencia**
 
-Distribuido bajo licencia MIT.  
-Consulta los términos en [LICENSE](LICENSE)
+Este proyecto está licenciado bajo los términos de la licencia **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.  
+No se permite el uso comercial del mismo.  
+Consulta los términos completos en el archivo [LICENSE](LICENSE) o en [creativecommons.org/licenses/by-nc/4.0](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ---
