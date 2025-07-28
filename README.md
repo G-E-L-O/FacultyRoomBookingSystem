@@ -82,7 +82,7 @@ Desde la vista semanal puedes exportar el horario en un archivo Excel que incluy
 ## 👤 **Autor**
 
 **Angelo Aarom Alama Quesada**  
-📎 [GitHub - Project A-01](https://github.com/Project-A-01)
+📎 [GitHub - FacultyRoomBookingSystem](https://github.com/G-E-L-O/FacultyRoomBookingSystem)
 
 ---
 
